@@ -316,7 +316,7 @@ def start(gameParams, screen, audioParams):
 
     return 'start'
 
-def optionsMenu(screen, font):
+def optionsMenu(screen, font, demonParams):
     """
     Options menu that is under construction, it will return to the start screen when clicked.
     Args:
@@ -335,9 +335,10 @@ def optionsMenu(screen, font):
         text = my_font.render("Under construction (Click to go back to start screen)", True, (255, 255, 0))
         screen.blit(text, text_rect)
         if pygame.mouse.get_pressed()[0]:
-            return 'start'
+            demonParams['health'] = 1
+            return 'start', demonParams['health']
 
-    return 'option'
+    return 'option', demonParams['health']
 
 def introCutscene(screen, text, font, i=1):
     """
@@ -1211,7 +1212,7 @@ while running:
     elif gameParams['status'] == 'cutscene':
         gameParams['status'] = introCutscene(screen, dialogue_text, my_font)
     elif gameParams['status'] == 'option':
-        gameParams['status'] = optionsMenu(screen, my_font)
+        gameParams['status'], demonParams['health'] = optionsMenu(screen, my_font, demonParams)
     elif gameParams['status'] == 'game':
         if not audioParams['bossfight']:
             pygame.mixer.music.load('audio/bossfight.mp3')
