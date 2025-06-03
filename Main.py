@@ -39,7 +39,7 @@ from Animation import Animation
 pygame.init()
 pygame.mixer.init()
 pygame.font.init()
-my_font = pygame.font.SysFont('MinimalPixel2', 20)
+my_font = pygame.font.Font('Font/MinimalPixel v2.ttf', 20)
 
 # Background music
 pygame.mixer.music.load('audio/title screen.mp3')
