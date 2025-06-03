@@ -13,6 +13,15 @@ A 2D boss-fight game inspired by *Elden Ring*, created using Python and Pygame f
 - **Health and Stamina UI** for player and boss
 - **Wall Collision System** using coordinates
 
+## Installation
+- Python 3.9
+- Pygame
+
+## Known Bugs
+
+## Cheat Codes
+- Pressing options and then returning back to the title screen will drop the demon's health to 1
+
 ## How to Run
 
 - Ensure all assets (images, audio, spritesheets) are in the correct folder structure
@@ -25,15 +34,12 @@ A 2D boss-fight game inspired by *Elden Ring*, created using Python and Pygame f
 - Left Click: Attack (Chain attacks possible)
 - Right Click: Block (DEMO)
 
-## Developer and Version History
-Developer: William Ding
-Course: ICS3U
-Game Title: Elden Ring: Pygame Edition
-Version History:
-- v1-v5: Core structure, walls, titlescreen, basic UI
-- v6-v10: Cutscenes, animation
-- v11-v15: Full player and demon combat logic
-- v16-v17: Improved UI and sound effects
+## Support
+DINW21164@gmail.com
+wding3@ocdsb.ca
+
+## Sources
+https://docs.google.com/document/d/1qIt3JdbcbzgU7IW_MqsOMQaWHLAaETyhiSNhkSuQ7Dc/edit?usp=sharing
 
 ```bash
 pip install pygame
